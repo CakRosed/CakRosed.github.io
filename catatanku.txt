@@ -1,0 +1,19 @@
+TOOLS YANG DIGUNAKAN 
+------------------------------
+//css comversi
+1.  tools custom chart, cleeping mask, dll
+    https://bennettfeely.com/ (macam macam tools custom css)
+
+
+//pewarnaan
+2.  tools mix, gradient mker, colorname
+    https://colordesigner.io/ (pewarnaan)
+3.  template trend gradient
+    https://uigradients.com/#Ver
+
+
+CATATANKU 
+--------------------------------
+1.  ketika error ketika compile node-sass:
+    -perhatikan report error dan cari line pada baris code yang disebutkan, 
+     karna terdapat error dari file tersebut sehingga tidak bisa di compile.

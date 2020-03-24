@@ -4,11 +4,14 @@
   "description": "my udemy course",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "konversi-sass": "node-sass sass/main.scss css/style.css -w" 
   },
   "author": "aunurDev",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.13.1"
+  },
+  "dependencies": {
+    "live-server": "^1.2.1"
   }
 }
