@@ -1,0 +1,30 @@
+/* animasi CSS */
+@keyframes gerakanKeKanan{
+    0%{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes gerakanKeKiri{
+    0%{
+        transform: translateX(10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes gerakanKeAtas{
+    0%{
+        transform: translateY(10rem); 
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}  

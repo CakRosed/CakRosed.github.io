@@ -1,0 +1,35 @@
+html{
+    font-size: 10px;  /* 1rem = 10px */
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    color: #777;
+    line-height: 1.7 ;
+}
+
+.main-header{
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Lato", sans-serif;
+    line-height: 1.7;
+    margin-bottom: 4rem;
+}
+
+.main-header-title{
+    font-size: 6rem;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 3rem;
+    animation-name: gerakanKeKanan;
+    animation-duration: 2s ;
+}
+
+.main-header-sub{
+    font-size: 2rem;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 1.6rem;
+    animation-name: gerakanKeKiri;
+    animation-duration: 2s;
+}
