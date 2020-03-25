@@ -17,3 +17,6 @@ CATATANKU
 1.  ketika error ketika compile node-sass:
     -perhatikan report error dan cari line pada baris code yang disebutkan, 
      karna terdapat error dari file tersebut sehingga tidak bisa di compile.
+
+2.  ketika nesting css tidak berhasil maka cek induk dari nesting tersebut, 
+    barangkali masih belum dinestingkan dari induknya induk

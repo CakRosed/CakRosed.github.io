@@ -43,5 +43,25 @@
         background: #fff;
         color: #777;
     }
+    &--text{
+        font-size: 1.6rem;
+        text-decoration: none;
+        color: $medium-green;
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid $medium-green;
+        font-weight: 600;
+        transition: all .3s;
+        &:hover{
+            transform: translateY(-3px);
+            color: $warna-putih;
+            background-color: $medium-green;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+        }
+        &:active{
+            transform: translateY(-1px);
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+        }
+    }
 }
 

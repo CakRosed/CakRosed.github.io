@@ -1,13 +1,11 @@
 .row{
     width: $panjang-grid;
     margin: 0 auto;
-    background: #e7e7e7;
     margin-bottom: $margin-vertikal;
     @include clearfix;
 
     [class^="col-"]{
         float: left;
-        background: orange;
         &:not(:last-child){
             margin-right: $margin-horizontal;
         }

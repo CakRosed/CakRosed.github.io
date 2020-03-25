@@ -32,3 +32,24 @@ body{
         animation-duration: 2s;
     }
 }
+
+.header__kedua{
+    font-size: 4rem;
+    text-transform: uppercase;
+    background: $green-gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.header__ketiga{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.paragraph{
+    font-size: 1.6rem;
+    &:not(:last-child){
+        margin-bottom: 4rem;
+    }
+}
