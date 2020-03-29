@@ -165,6 +165,95 @@ body {
     transform: scale(0.9);
     box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.3); }
 
+.card {
+  position: relative;
+  perspective: 150rem;
+  height: 53rem; }
+  .card__side {
+    height: 53rem;
+    font-size: 2rem;
+    transition: all 1.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 5px; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background: linear-gradient(to right bottom, #ffb900, #ff7730); }
+      .card__side--back--2 {
+        background: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card__side--back--3 {
+        background: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__gambar {
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
+    .card__gambar--1 {
+      background: linear-gradient(to right bottom, #ffb900, #ff7730), url("../img/nat-5.jpg") no-repeat top/cover; }
+    .card__gambar--2 {
+      background: linear-gradient(to right bottom, #7ed56f, #28b485), url("../img/nat-6.jpg") no-repeat top/cover; }
+    .card__gambar--3 {
+      background: linear-gradient(to right bottom, #2998ff, #5643fa), url("../img/nat-7.jpg") no-repeat top/cover; }
+  .card__heading {
+    font-size: 2.5rem;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 300;
+    width: 65%; }
+    .card__heading--span {
+      padding: 1rem 2rem;
+      box-decoration-break: clone;
+      -webkkit-box-decoration-break: clone; }
+      .card__heading--span--1 {
+        background: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)); }
+      .card__heading--span--2 {
+        background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 125, 0.8)); }
+      .card__heading--span--3 {
+        background: linear-gradient(to right bottom, rgba(41, 152, 255, 0.8), rgba(86, 67, 250, 0.8)); }
+  .card__table {
+    width: 80%;
+    margin: auto;
+    padding: 3rem; }
+    .card__table ul {
+      list-style: none;
+      font-size: 1.5rem; }
+      .card__table ul li {
+        text-align: center;
+        padding: 1rem; }
+        .card__table ul li:not(last-child) {
+          border-bottom: 1px solid rgba(126, 126, 126, 0.5); }
+  .card__harga {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; }
+    .card__harga--judul {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: 100;
+      text-transform: uppercase; }
+    .card__harga--nilai {
+      font-size: 6rem;
+      font-weight: 100;
+      color: #fff;
+      text-transform: uppercase; }
+
 .box {
   background: rgba(255, 255, 255, 0.8);
   padding: 2rem;
@@ -242,3 +331,8 @@ body {
   -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
   clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
   position: relative; }
+
+.section-tours {
+  padding: 20rem 0;
+  background: #eeeeee;
+  margin-top: -12rem; }

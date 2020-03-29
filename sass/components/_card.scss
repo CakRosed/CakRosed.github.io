@@ -1,0 +1,121 @@
+.card{
+    position: relative;
+    perspective: 150rem;
+    height: 53rem;
+
+    &__side{
+        height: 53rem;
+        font-size: 2rem;
+        transition: all 1.3s;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        overflow: hidden;
+        box-shadow: 0 1rem 4rem rgba($warna-hitam, .2);
+        border-radius: 5px;
+        &--front{
+        }
+        &--back{
+            transform: rotateY(180deg);
+            &--1{
+                background: linear-gradient(to right bottom, $warna-orange-muda, $warna-orange-tua);
+            }
+            &--2{
+                background: linear-gradient(to right bottom, $light-green, $dark-green);
+            }
+            &--3{
+                background: linear-gradient(to right bottom, $warna-biru-muda, $warna-biru-tua);
+            }
+        }
+    }
+    &:hover &__side{
+        &--front{
+            transform: rotateY(-180deg);
+        }
+        &--back{
+            transform: rotateY(0);
+        }
+    }
+    // SET CARD FRONT SIDE
+    &__gambar{
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        &--1{
+            background: linear-gradient(to right bottom, $warna-orange-muda, $warna-orange-tua), url("../img/nat-5.jpg") no-repeat top /cover;
+        }
+        &--2{
+            background: linear-gradient(to right bottom, $light-green, $dark-green), url("../img/nat-6.jpg") no-repeat top /cover;
+        }
+        &--3{
+            background: linear-gradient(to right bottom, $warna-biru-muda, $warna-biru-tua), url("../img/nat-7.jpg") no-repeat top /cover;
+        }
+    }
+    &__heading{
+        font-size: 2.5rem;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        text-transform: uppercase;
+        color: $warna-putih;
+        font-weight: 300;
+        width: 65%;
+        &--span{
+            padding: 1rem 2rem;
+            box-decoration-break: clone;
+            -webkkit-box-decoration-break:clone;
+            &--1{
+                background: linear-gradient(to right bottom, rgba($warna-orange-muda, .8), rgba($warna-orange-tua, .8));
+            }
+            &--2{ 
+                background: linear-gradient(to right bottom, rgba($light-green, .8), rgba($medium-green, .8));
+            }
+            &--3{
+                background: linear-gradient(to right bottom, rgba($warna-biru-muda, .8), rgba($warna-biru-tua, .8));
+            }
+        }
+    }
+    &__table{
+        width: 80%;
+        margin: auto;
+        padding:  3rem;
+        ul{
+            list-style: none;
+            font-size: 1.5rem;
+            li{
+                text-align: center;
+                padding: 1rem;
+                &:not(last-child){
+                    border-bottom: 1px solid rgba($warna-abu-abu, .5);
+                }
+            }
+        }
+    }
+
+    // SET CARD BACK SIDE
+    &__harga{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+
+        &--judul{
+            font-size: 2.5rem;
+            color: $warna-putih;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        &--nilai{
+            font-size: 6rem;
+            font-weight: 100;
+            color: $warna-putih;
+            text-transform: uppercase;
+        }
+    }
+}

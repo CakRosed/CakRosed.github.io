@@ -24,3 +24,13 @@ CATATANKU
 
 2.  ketika nesting css tidak berhasil maka cek induk dari nesting tersebut, 
     barangkali masih belum dinestingkan dari induknya induk
+
+
+
+PREPARE
+----------------------------
+#5433ff→ #20bdff→ #a5fecb 
+
+#a6ffcb→ #1fa2ff→ #12d8fa  
+
+#12d8fa→ #fd1d1d→ #fcb045 
