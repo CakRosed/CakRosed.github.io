@@ -1,0 +1,52 @@
+.testimonial{
+    width: 85%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background: $warna-putih;
+    padding: 6rem;
+    padding-left: 9rem;
+    box-shadow: 0 3rem 6rem rgba($warna-hitam, .25);
+    transform: skewX(-12deg); //miringkan 12deg
+    position: relative;
+
+    & > * {
+        transform: skewX(12deg); //normalisasi skew semua child dari testimonial
+    }
+
+    &__shape{
+        height: 13rem;
+        width: 13rem;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%); //untuk membuat elemen diluarnya mengikuti elemen bulat juga
+        transform: 
+        translateX(-4rem) //memindahkan lingkaran asli ke kiri supaya ada margin yang tercipta
+        skewX(12deg); //normalisasi skew. karna shape tidak terinclude efek normalisasi skew
+    }
+    &__image{
+        width: 100%;
+        height: 100%;
+        transform: scale(1.4);
+        transition: all .5s;
+    }
+    &__caption{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        text-align: center;
+        vertical-align: center;
+        text-transform: uppercase;
+        color: $warna-putih;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &:hover &__caption{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    &:hover &__image{
+        transform: scale(1);
+        filter: blur(5px) brightness(80%);
+    }
+}

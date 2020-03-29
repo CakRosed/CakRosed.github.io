@@ -1,4 +1,4 @@
-TOOLS YANG DIGUNAKAN 
+TOOLS YANG DIGUNAKAN / BAHAN 
 ------------------------------
 //css comversi
 1.  tools custom chart, cleeping mask, dll
@@ -15,6 +15,10 @@ TOOLS YANG DIGUNAKAN
 4.  linea
     https://linea.io/
 
+//free video source
+1.  coverr
+    https://coverr.co/video
+
 
 CATATANKU 
 --------------------------------
@@ -27,10 +31,3 @@ CATATANKU
 
 
 
-PREPARE
-----------------------------
-#5433ff→ #20bdff→ #a5fecb 
-
-#a6ffcb→ #1fa2ff→ #12d8fa  
-
-#12d8fa→ #fd1d1d→ #fcb045 

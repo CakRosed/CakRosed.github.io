@@ -35,14 +35,23 @@
         transform: scale(1.4, 1.7);
         opacity: 0;
     }
-    &--white:after{
-        background-color: #fff;
+
+    &--white{
+        background: $warna-putih;
+        color: $warna-abu-abu;
+        &::after{
+            background-color: $warna-putih;
+        }
     }
     
-    &--white{
-        background: #fff;
-        color: #777;
+    &--green{
+        background: $medium-green;
+        color: $warna-putih;
+        &::after{
+            background-color: $medium-green;
+        }
     }
+
     &--text{
         font-size: 1.6rem;
         text-decoration: none;
