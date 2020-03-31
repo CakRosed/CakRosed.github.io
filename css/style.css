@@ -474,20 +474,37 @@ body {
   .footer__logo {
     width: 15rem;
     height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #eeeeee;
+    padding-top: 2rem;
+    display: inline-block; }
   .footer__list {
-    list-style: none;
-    display: inline-block;
-    margin-right: 2rem; }
+    list-style: none; }
   .footer__item {
-    display: inline-block;
-    margin-right: 2rem; }
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
   .footer__link {
     text-decoration: none;
     text-transform: uppercase;
-    color: #eeeeee; }
+    color: #eeeeee;
+    display: inline-block;
+    transition: all .2s;
+    background: #333;
+    padding: .3rem; }
     .footer__link:hover {
-      box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
-      transform: scale(1.2); }
+      box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.2);
+      transform: scale(1.2) rotate(5deg);
+      color: #55c57d; }
+    .footer__link:active {
+      transform: scale(1.07) rotate(3deg);
+      box-shadow: 1.3rem 2rem rgba(0, 0, 0, 0.2); }
+  .footer__copyright {
+    color: #eeeeee;
+    border-top: 1px solid #eeeeee;
+    padding-top: 2rem;
+    float: right;
+    width: 80%; }
 
 .section-about {
   padding: 20rem 0;
