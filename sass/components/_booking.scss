@@ -1,0 +1,12 @@
+.booking{
+    height: 50rem;
+    // background: linear-gradient($dark-green, $warna-biru-tua, $warna-orange-tua);
+    // background: linear-gradient(to right, $warna-red 0%, $warna-red 50%, $warna-putih 50%);
+    background: linear-gradient(105deg, rgba($warna-putih, .8) 0%, rgba($warna-putih, .8) 50%, transparent 50%), url(../img/nat-10.jpg) no-repeat top /cover;
+    border-radius: 5px;
+    box-shadow: 0 2rem 4rem rgba($warna-hitam, .2);
+    &__form{
+        padding: 3.5rem 4rem;
+        width: 50%;
+    }
+}

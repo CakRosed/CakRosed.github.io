@@ -1,0 +1,35 @@
+.footer{
+    background: #333;
+    padding: 10rem 0 5rem 0;
+    font-size: 1.4rem;
+
+    &__logo-box{
+        margin-bottom: 6rem;
+    }
+    &__logo{
+        width: 15rem;
+        height: auto;
+    }
+    &__navigation{
+    }
+    &__list{
+        list-style: none;
+        display: inline-block;
+        margin-right: 2rem ;
+    }
+    &__item{
+        display: inline-block;
+        margin-right: 2rem;
+    }
+    &__link{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $warna-soft-white;
+        &:hover{
+            box-shadow: 0 2rem 4rem rgba($warna-hitam, .2);
+            transform: scale(1.2);
+        }
+    }
+    &__copyright{
+    }
+}

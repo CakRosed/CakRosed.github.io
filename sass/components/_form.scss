@@ -1,0 +1,85 @@
+.form{
+    &__group{
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+    }
+    &__input{
+        font-size: 1.6rem;
+        padding: 1.5rem 2rem;
+        font-family: "Lato", sans-serif;
+        background: rgba($warna-putih, .5);
+        color: $warna-text;
+        width: 100%;
+        display: block;
+        border: none;
+        border-bottom: 3px solid transparent;
+        transition: all .3s;
+        &:focus{
+            outline-color: none;
+            border-bottom: 3px solid $medium-green;
+            box-shadow: 0 1rem 2rem rgba($warna-hitam, .1);
+            &:invalid{
+                border-bottom: 3px solid $warna-orange-tua;
+            }
+        }
+    }
+    &__label{
+        display: block;
+        margin-left: 2rem;
+        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        opacity: 1;
+        transition: .7s all;
+        cursor: pointer;
+    }
+    &__input:placeholder-shown + &__label{
+        transform: translateY(-4rem);
+        opacity: 0;
+    }
+
+    // radio form
+    &__radio{
+        &--group{
+            width: 45%;
+            display: inline-block;
+        }
+        &--label{
+            font-size: 1.5rem;
+            font-weight: 600;
+            position: relative ;
+            padding-left: 4rem;
+        }
+        &--input{
+            display: none ;
+        }
+        &--button{
+            height: 3rem;
+            width: 3rem; 
+            display: block;
+            border: 5px solid $medium-green;
+            position: absolute;
+            top: -.5rem ;
+            left: 0;
+            border-radius: 100%;
+            &::after{
+                content: "";
+                display: block;
+                width: 70%;
+                height: 70%;
+                background: $medium-green;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+                opacity: 0;
+                transition: all .3s;
+            }
+        }
+        &--input:checked + &--label &--button::after{ //gunakan selektor sibling atau saudara "+" jika hirarki sejajar
+            opacity: 1;
+        }
+    }
+}
