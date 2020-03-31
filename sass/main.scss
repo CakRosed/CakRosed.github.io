@@ -1,9 +1,15 @@
+//abstract files
 @import "abstract/variables";
 @import "abstract/mixin";
+
+//base files
 @import "base/animation";
 @import "base/base";
 @import "base/utilities";
 @import "base/typography";
+
+//components files
+@import "components/navigation";
 @import "components/button";
 @import "components/composition";
 @import "components/card";
@@ -12,7 +18,11 @@
 @import "components/backvideo";
 @import "components/booking";
 @import "components/form";
+
+//layout files
 @import "layout/header";
 @import "layout/grid";
 @import "layout/footer";
+
+//page files
 @import "pages/home";

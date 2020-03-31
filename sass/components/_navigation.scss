@@ -1,0 +1,76 @@
+.navigation{
+    &__checkbox{
+        display: none;
+    }
+    &__button{
+        display: inline-block;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        right: 3.5rem;
+        top: 3.5rem;
+        background: $warna-putih;
+        z-index: 200;
+        border-radius: 100%;
+        box-shadow: 0 1rem 2rem rgba($warna-hitam, .2);
+    }
+    
+    &__background{
+        display: inline-block;
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        background: $radial-blue-gradient;
+        z-index: 100;
+        right: 4rem;
+        top: 4rem;
+        border-radius: 100%;
+        transition: all .8s;
+    }
+    &__nav{
+        position: fixed;
+        z-index: 150;
+        height: 100vh;
+        width: 80%;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &__list{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        text-align: center;
+    }
+    &__item{
+        margin: 1rem;
+    }
+    &__link{
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 3rem;
+        color: $warna-putih;
+        display: inline-block;
+        font-weight: 300;
+        background: linear-gradient(120deg, transparent 50%, white 50%);
+        background-position: 0%;
+        background-size: 230%;
+        padding: 1rem 2rem;
+        transition: all .3s;
+        &:hover{
+            background-position: 100%;
+            color: #63C3B0;
+        }
+    }
+
+    // initiator background scale
+    &__checkbox:checked ~ &__background{
+        transform: scale(60);
+    }
+    &__checkbox:checked ~ &__nav{
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+    }
+}
