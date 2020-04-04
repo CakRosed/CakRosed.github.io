@@ -12,7 +12,9 @@
 <body>
     <nav class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="id-checkbox">
-        <label for="id-checkbox" class="navigation__button">MENU</label>
+        <label for="id-checkbox" class="navigation__button">
+            <span class="navigation__icon"></span>
+        </label>
         <div class="navigation__background"></div>
         <div class="navigation__nav">
             <ul class="navigation__list">
@@ -34,7 +36,7 @@
                 <span class="header__utama--judul">outdoors</span>
                 <span class="header__utama--keterangan">is where life heppens</span>
             </h2>
-            <a class="btn btn--white" href="#">discover our tours </a>
+            <a class="btn btn--white" href="#section-tours">discover our tours </a>
         </div>
     </header>
 
@@ -95,7 +97,7 @@
             </div>
         </section>
 
-        <section class="section-tours">
+        <section class="section-tours" id="section-tours">
             <div class="text-center m-btm-lg">
                 <h2 class="header__kedua">Most popular tours</h2>
             </div>
@@ -123,7 +125,7 @@
                             <div class="card__harga">
                                 <div class="card__harga--judul">Only</div>
                                 <div class="card__harga--nilai m-btm-lg">$553</div>
-                                <a href="#" class="btn btn--white">bookk now</a>
+                                <a href="#popup" class="btn btn--white">bookk now</a>
                             </div>
                         </div>
                     </div>
@@ -151,7 +153,7 @@
                             <div class="card__harga">
                                 <div class="card__harga--judul">Only</div>
                                 <div class="card__harga--nilai m-btm-lg">$553</div>
-                                <a href="#" class="btn btn--white">bookk now</a>
+                                <a href="#popup" class="btn btn--white">bookk now</a>
                             </div>
                         </div>
                     </div>
@@ -179,7 +181,7 @@
                             <div class="card__harga">
                                 <div class="card__harga--judul">Only</div>
                                 <div class="card__harga--nilai m-btm-lg">$553</div>
-                                <a href="#" class="btn btn--white">bookk now</a>
+                                <a href="#popup" class="btn btn--white">bookk now</a>
                             </div>
                         </div>
                     </div>
@@ -287,6 +289,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- popup -->
+    <div class="popup" id="popup">
+        <div class="popup__box">
+            <div class="popup__kiri">
+                <img src="img/nat-8.jpg" alt="" class="popup__gambar">
+                <img src="img/nat-9.jpg" alt="" class="popup__gambar">
+            </div>
+            <div class="popup__kanan">
+                <a href="#section-tours" class="popup__close">X</a>
+                <h2 class="header__kedua">start book now</h2>
+                <h3 class="header__ketiga m-btm-sm">please read and conditions before you book this tours</h3>
+                <p class="popup__text m-btm-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae modi nam nostrum, sint laborum cum esse dolores assumenda? Officiis debitis modi libero, itaque nemo adipisci inventore, officia perferendis voluptas alias necessitatibus voluptatem, totam pariatur eaque quaerat labore odit sit iusto magni quia veniam impedit id aspernatur. Natus ab cupiditate voluptas perspiciatis dolores ad odio aliquid ipsam consequatur eius. Porro, odit.</p>
+                <a href="" class="btn btn--green">booknow</a>
+            </div>
+        </div>
+    </div>
 
     <!-- <section class="section-grid">
         <div class="row">

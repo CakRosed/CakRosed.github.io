@@ -1,13 +1,21 @@
 .row{
-    width: $panjang-grid;
+    max-width: $panjang-grid;
     margin: 0 auto;
     margin-bottom: $margin-vertikal;
     @include clearfix;
+    @include responsive(phone){
+        max-width: 50rem;
+    }
 
     [class^="col-"]{
         float: left;
         &:not(:last-child){
             margin-right: $margin-horizontal;
+        }
+        @include responsive(phone){
+            width: 100% !important;
+            margin-bottom: 2rem;
+            margin-right: 0;
         }
     }
     // [class^-"namaClass"]{}  selector untuk SELURUH CLASS YANG DIAWALI KATA {namaClass}

@@ -1,0 +1,69 @@
+.popup{
+    background: rgba($warna-hitam, .8);
+    height: 100vh;
+    width: 100%;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s;
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    &__box{
+        overflow: hidden;
+        width: 75%;
+        background: $warna-putih;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(.1);
+        border-radius: 5px;
+        box-shadow: 0 1rem 2rem rgba($warna-hitam, .3);
+        display: table;
+        transition: all .3s;
+    }
+    &:target &__box{
+        transform: translate(-50%, -50%) scale(1);
+        top: 50%;
+        left: 50%;
+    }
+    &__kiri{
+        background: lightblue;
+        display: table-cell;
+        width: 33.333333%;
+    }
+    &__kanan{
+        width: 66.666666% ;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 4.5rem;
+        position: relative;
+    }
+    &__text{
+        font-size: 1.4rem;
+        column-count: 2; //jumlah split kolom
+        column-gap: 4rem; //ukuran jeda kolom
+    }
+    &__gambar{
+        width: 100%;
+        height: 50%;
+        display: block;
+    }
+    &__close{
+        position: absolute;
+        top: 2rem;
+        right: 3rem;
+        font-size: 2rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all .4s;
+        &:hover{
+            color: $medium-green;
+        }
+    }
+}

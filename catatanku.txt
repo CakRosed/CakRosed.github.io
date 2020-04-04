@@ -19,6 +19,11 @@ TOOLS YANG DIGUNAKAN / BAHAN
 1.  coverr
     https://coverr.co/video
 
+//easing animasi
+1.  cubic-bezier (crator)
+    https://cubic-bezier.com/#.72,.01,.33,1
+2.  easing.net (template)
+    https://easings.net/
 
 CATATANKU 
 --------------------------------

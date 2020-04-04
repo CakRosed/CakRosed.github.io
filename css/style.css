@@ -1,3 +1,10 @@
+/*
+phone               <= 600px
+tablet potrait      <= 900px
+tablet landscape    <= 1200px
+desktop             = 1200px - 1800px
+big desktop         >1800px
+*/
 /* animasi CSS */
 @keyframes gerakanKeKanan {
   0% {
@@ -28,6 +35,16 @@
   margin: 0;
   box-sizing: border-box; }
 
+html {
+  font-size: 10px;
+  /* 1rem = 10px */ }
+  @media (max-width: 900px) {
+    html {
+      font-size: 8px; } }
+  @media (max-width: 600px) {
+    html {
+      font-size: 7px; } }
+
 .text-center {
   text-align: center; }
 
@@ -39,10 +56,6 @@
 
 .m-btm-sm {
   margin-bottom: 2rem !important; }
-
-html {
-  font-size: 10px;
-  /* 1rem = 10px */ }
 
 body {
   font-family: "Lato", sans-serif;
@@ -100,27 +113,30 @@ body {
   background: #fff;
   z-index: 200;
   border-radius: 100%;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer; }
 
 .navigation__background {
   display: inline-block;
   height: 6rem;
   width: 6rem;
   position: fixed;
-  background: radial-gradient(#2897bf, #46b4c2, #74c9bd, #a9ddb7, #d5efb3);
-  z-index: 100;
   right: 4rem;
   top: 4rem;
+  background: radial-gradient(#2897bf, #46b4c2, #74c9bd, #a9ddb7, #d5efb3);
+  z-index: 100;
   border-radius: 100%;
-  transition: all .8s; }
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__nav {
   position: fixed;
   z-index: 150;
   height: 100vh;
-  width: 80%;
+  width: 0%;
   opacity: 0;
-  transition: all .5s; }
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__list {
   position: absolute;
@@ -144,7 +160,7 @@ body {
   background-position: 0%;
   background-size: 230%;
   padding: 1rem 2rem;
-  transition: all .3s; }
+  transition: all .5s; }
   .navigation__link:hover {
     background-position: 100%;
     color: #63C3B0; }
@@ -156,6 +172,38 @@ body {
   opacity: 1;
   visibility: visible;
   width: 100%; }
+
+.navigation__checkbox:checked ~ .navigation__button .navigation__icon {
+  background: transparent; }
+  .navigation__checkbox:checked ~ .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(-135deg); }
+  .navigation__checkbox:checked ~ .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(135deg); }
+
+.navigation__icon {
+  width: 3rem;
+  height: 2px;
+  display: inline-block;
+  background-color: #28b485;
+  position: relative;
+  margin-top: 3.5rem;
+  transition: all .15s; }
+  .navigation__icon::before, .navigation__icon::after {
+    transition: all .5s;
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    background: #28b485; }
+  .navigation__icon::before {
+    top: -1rem;
+    left: 0; }
+  .navigation__icon::after {
+    top: 1rem;
+    left: 0; }
 
 .btn {
   text-decoration: none;
@@ -487,6 +535,66 @@ body {
 .form__radio--input:checked + .form__radio--label .form__radio--button::after {
   opacity: 1; }
 
+.popup {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100vh;
+  width: 100%;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 250;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .4s; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__box {
+    overflow: hidden;
+    width: 75%;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    border-radius: 5px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    display: table;
+    transition: all .3s; }
+  .popup:target .popup__box {
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    left: 50%; }
+  .popup__kiri {
+    background: lightblue;
+    display: table-cell;
+    width: 33.333333%; }
+  .popup__kanan {
+    width: 66.666666%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 4.5rem;
+    position: relative; }
+  .popup__text {
+    font-size: 1.4rem;
+    column-count: 2;
+    column-gap: 4rem; }
+  .popup__gambar {
+    width: 100%;
+    height: 50%;
+    display: block; }
+  .popup__close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .4s; }
+    .popup__close:hover {
+      color: #55c57d; }
+
 .header {
   height: 95vh;
   background: linear-gradient(to left bottom, rgba(255, 255, 217, 0.81), rgba(239, 249, 189, 0.8), rgba(213, 239, 179, 0.8), rgba(169, 221, 183, 0.8), rgba(116, 201, 189, 0.8), rgba(70, 180, 194, 0.8), rgba(40, 151, 191, 0.8), rgba(32, 115, 178, 0.8), rgba(35, 78, 160, 0.8), rgba(29, 49, 133, 0.8), rgba(29, 49, 133, 0.8)), url("../img/hero.jpg") no-repeat top/cover;
@@ -511,17 +619,25 @@ body {
     text-align: center; }
 
 .row {
-  width: 114rem;
+  max-width: 114rem;
   margin: 0 auto;
   margin-bottom: 8rem; }
   .row::after {
     content: "";
     display: table;
     clear: both; }
+  @media (max-width: 600px) {
+    .row {
+      max-width: 50rem; } }
   .row [class^="col-"] {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+    @media (max-width: 600px) {
+      .row [class^="col-"] {
+        width: 100% !important;
+        margin-bottom: 2rem;
+        margin-right: 0; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
