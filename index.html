@@ -268,7 +268,16 @@
 
     <footer class="footer">
         <div class="footer__logo-box text-center">
-            <img src="img/logo-green-2x.png" alt="" class="footer__logo">
+            <picture class="footer__logo">
+                <!-- tampilan logo untuk media phone -->
+                <!-- 
+                    atribut src untuk cadangan jika browser tidak support srcset  
+                    atribut media untuk set media-query
+                -->
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" alt="Logo Footer" media="(max-width: 600px)" src="img/logo-green-small-1x.png">
+                <!-- tampilan logo untuk media tablet keatas -->
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Logo Footer" src="img/logo-green-1x.png">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">

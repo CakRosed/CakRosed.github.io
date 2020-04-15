@@ -14,6 +14,10 @@
         border-top: 1px solid $warna-soft-white;
         padding-top: 2rem;
         display: inline-block;
+        @include responsive( tablet-potrait){
+            width: 100%;
+            text-align: center;
+        }
     }
     &__list{
         list-style: none;
@@ -49,5 +53,10 @@
         padding-top: 2rem;
         float: right;
         width: 80%;
+        @include responsive( tablet-potrait){
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
     }
 }

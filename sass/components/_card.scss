@@ -53,6 +53,19 @@
         &--3{
             background: linear-gradient(to right bottom, $warna-biru-muda, $warna-biru-tua), url("../img/nat-7.jpg") no-repeat top /cover;
         }
+        @supports (background-blend-mode: screen){
+            &--1{
+                background: linear-gradient(to right bottom, $warna-orange-muda, $warna-orange-tua), url("../img/nat-5.jpg") no-repeat top /cover;
+            }
+            &--2{
+                background: linear-gradient(to right bottom, $light-green, $dark-green), url("../img/nat-6.jpg") no-repeat top /cover;
+            }
+            &--3{
+                background: linear-gradient(to right bottom, $warna-biru-muda, $warna-biru-tua), url("../img/nat-7.jpg") no-repeat top /cover;
+            }
+            background-blend-mode: screen;
+        }
+        
     }
     &__heading{
         font-size: 2.5rem;
@@ -67,7 +80,7 @@
         &--span{
             padding: 1rem 2rem;
             box-decoration-break: clone;
-            -webkkit-box-decoration-break:clone;
+            -webkit-box-decoration-break:clone;
             &--1{
                 background: linear-gradient(to right bottom, rgba($warna-orange-muda, .8), rgba($warna-orange-tua, .8));
             }
@@ -89,7 +102,7 @@
             li{
                 text-align: center;
                 padding: 1rem;
-                &:not(last-child){
+                &:not(:last-child){
                     border-bottom: 1px solid rgba($warna-abu-abu, .5);
                 }
             }
@@ -118,4 +131,44 @@
             text-transform: uppercase;
         }
     }
+
+    // media query tablet-potrait
+    @include responsive( tablet-potrait){ 
+        height: auto;
+        background: #fff;
+        box-shadow: 0 1rem 4rem rgba($warna-hitam, .2);
+        &__side{
+            height: auto; 
+            position: relative;
+            width: 100%; 
+            border-radius: 5px;
+            box-shadow: none;
+            &--back{
+                transform: rotateY(0deg);
+                -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%) !important;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%) !important;
+            }
+            &--front{
+                transform: rotateY(0);
+            }
+        } 
+    
+        // SET CARD BACK SIDE
+        &__harga{
+            position: relative;
+            padding: 4rem;
+            top: 0%;
+            left: 0%;
+            transform: translate(0);
+            text-align: center;
+            width: 100%;
+            &--judul{
+                font-size: 1.4rem;
+            }
+            &--nilai{
+                font-size: 4rem;
+            }
+        }
+    }
 }
+

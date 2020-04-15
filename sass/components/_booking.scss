@@ -8,5 +8,15 @@
     &__form{
         padding: 3.5rem 4rem;
         width: 50%;
+        @include responsive( tablet-potrait){
+            width: 100%;
+        }
+    }
+    
+    // responsive
+    @include responsive( tablet-potrait){
+        height: auto;
+        background: linear-gradient(105deg, rgba($warna-putih, .8) 0%, rgba($warna-putih, .8) 100%), url(../img/nat-10.jpg) no-repeat top /cover;
+
     }
 }

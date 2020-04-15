@@ -44,6 +44,10 @@
         &--group{
             width: 45%;
             display: inline-block;
+            @include responsive( phone){
+                width: 100%;
+                margin-bottom: 3rem;
+            }
         }
         &--label{
             font-size: 1.5rem;

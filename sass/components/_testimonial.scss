@@ -8,9 +8,22 @@
     box-shadow: 0 3rem 6rem rgba($warna-hitam, .25);
     transform: skewX(-12deg); //miringkan 12deg
     position: relative;
+    @include responsive( tablet-potrait){
+        width: 110%;
+    }
+    @include responsive(phone){
+        transform: skewX(0deg);
+        -webkit-transform: skewX(0deg);
+        width: 100%;
+        border-radius: 5px;
+    }
 
     & > * {
         transform: skewX(12deg); //normalisasi skew semua child dari testimonial
+        @include responsive(phone){
+            transform: skewX(0deg);
+            -webkit-transform: skewX(0deg);
+        }
     }
 
     &__shape{
@@ -22,6 +35,13 @@
         transform: 
         translateX(-4rem) //memindahkan lingkaran asli ke kiri supaya ada margin yang tercipta
         skewX(12deg); //normalisasi skew. karna shape tidak terinclude efek normalisasi skew
+        @include responsive( tablet-potrait){
+            transform: translateX(-2rem) skewX(12deg);
+        }
+        @include responsive(phone){
+            transform: translateX(-2rem) skewX(0deg);
+            -webkit-transform: skewX(0deg);
+        }
     }
     &__image{
         width: 100%;

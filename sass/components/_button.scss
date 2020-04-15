@@ -64,6 +64,9 @@
         border-bottom: 1px solid $medium-green;
         font-weight: 600;
         transition: all .3s;
+        @include responsive( tablet-potrait){
+            margin-bottom: 6rem;
+        }
         &:hover{
             transform: translateY(-3px);
             color: $warna-putih;

@@ -10,6 +10,7 @@
         background: $green-gradient;
         display: inline-block;
         background-clip: text;
+        -webkit-background-clip: text;
         color: transparent;
     }
     &__text{

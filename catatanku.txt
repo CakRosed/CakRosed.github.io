@@ -25,6 +25,12 @@ TOOLS YANG DIGUNAKAN / BAHAN
 2.  easing.net (template)
     https://easings.net/
 
+//responsive media tes 
+1.  Responsive web design - testing tols online
+    https://websiteresponsivetest.com/
+2.  am i responsive? 
+    http://ami.responsivedesign.is/#
+
 CATATANKU 
 --------------------------------
 1.  ketika error ketika compile node-sass:

@@ -6,6 +6,9 @@
     @include responsive(phone){
         max-width: 50rem;
     }
+    @include responsive( tablet-potrait){
+        max-width: 55rem;
+    }
 
     [class^="col-"]{
         float: left;
@@ -13,6 +16,14 @@
             margin-right: $margin-horizontal;
         }
         @include responsive(phone){
+            float: none;
+            width: 100% !important;
+            margin-bottom: 2rem !important;
+            margin-right: 0;
+            padding: 0 3rem;
+        }
+        @include responsive( tablet-potrait){
+            float: none ;
             width: 100% !important;
             margin-bottom: 2rem;
             margin-right: 0;

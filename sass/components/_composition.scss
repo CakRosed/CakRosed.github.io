@@ -6,6 +6,13 @@
         box-shadow: 0 2rem 4rem rgba($warna-hitam, .3);
         position: absolute;
         transition: all .2s;
+        z-index: 9;
+        @include responsive( tablet-potrait){
+            width: 33.333333%;
+            position: relative;
+            float: left;
+
+        }
         &:hover{
             transform: scale(1.2);
             // outline: 1.5rem solid $medium-green;
@@ -15,14 +22,29 @@
         &--1{
             top: -2rem;
             left: 0;
+            @include responsive( tablet-potrait){
+                top: 0;
+                transform: scale(1.1);
+            }
         }
         &--2{
             right: 2rem;
             top: 2rem;
+            @include responsive( tablet-potrait){
+                top: 0;
+                left: 0;
+                transform: scale(1.4);
+                z-index: 100;
+            }
         }
         &--3{
             top: 10rem;
             left: 20%;
+            @include responsive( tablet-potrait){
+                top: 0;
+                left: 0;
+                transform: scale(1.1);
+            }
         }
     }
 

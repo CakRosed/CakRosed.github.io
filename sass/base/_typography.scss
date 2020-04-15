@@ -17,6 +17,10 @@ body{
         letter-spacing: 3rem;
         animation-name: gerakanKeKanan;
         animation-duration: 2s ;
+        @include responsive(phone){
+            font-size: 5rem;
+            letter-spacing: 2rem;
+        }
     }
     
     &--keterangan{
@@ -26,6 +30,10 @@ body{
         letter-spacing: 1.6rem;
         animation-name: gerakanKeKiri;
         animation-duration: 2s;
+        @include responsive(phone){
+            font-size:2rem;
+            letter-spacing: 1rem;
+        }
     }
 }
 
@@ -36,6 +44,9 @@ body{
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    @include responsive(phone){
+        font-size: 2rem;
+    }
 }
 
 .header__ketiga{
